@@ -3,28 +3,115 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Política de Privacidad</title>
+    <title>Privacy Policy / Política de Privacidad</title>
+    <style>
+      .english,
+      .spanish {
+        display: none;
+        text-align: justify; /* Justificar texto */
+      }
+      .language-toggle {
+        margin-top: 20px;
+        text-align: center; /* Centrar botones */
+      }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0 10%;
+      }
+      h1 {
+        text-align: center; /* Centrar el encabezado */
+      }
+    </style>
+    <script>
+      function toggleLanguage(lang) {
+        const englishContent = document.querySelector(".english");
+        const spanishContent = document.querySelector(".spanish");
+        if (lang === "en") {
+          englishContent.style.display = "block";
+          spanishContent.style.display = "none";
+        } else {
+          englishContent.style.display = "none";
+          spanishContent.style.display = "block";
+        }
+      }
+    </script>
   </head>
   <body>
     <header>
-      <h1>Política de Privacidad</h1>
+      <h1 id="main-title">Privacy Policy / Política de Privacidad</h1>
     </header>
 
-    <section>
+    <div class="language-toggle">
+      <button onclick="toggleLanguage('es')">Español</button>
+      <button onclick="toggleLanguage('en')">English</button>
+    </div>
+
+    <section class="english">
+      <p>
+        This privacy policy describes how our news app handles and protects the
+        information that users provide while using the app. We want to make it
+        clear that
+        <strong>our app does not collect or store any personal data</strong>
+        from users at any time.
+      </p>
+      <p>
+        We are committed to ensuring the confidentiality of any information that
+        may be shared through third-party services accessible from the app, such
+        as links to external websites.
+      </p>
+
+      <h2>Links to Third Parties</h2>
+      <p>
+        Our app may contain links to third-party websites or services. These
+        sites are not under our control, and we are not responsible for their
+        privacy policies or practices. Once you click on these links, you are
+        subject to the terms and conditions of those external sites. We
+        recommend reviewing the privacy policies of each of these sites to
+        ensure that you agree with them.
+      </p>
+
+      <h2>Use of Cookies</h2>
+      <p>
+        Our app does not use its own cookies to collect user information.
+        However, third-party sites accessed from the app may use cookies to
+        enhance user experience. You can configure your browser to reject
+        cookies if you prefer.
+      </p>
+
+      <h2>Updates to This Privacy Policy</h2>
+      <p>
+        We reserve the right to modify this Privacy Policy at any time. Any
+        changes will be posted on this page, and it is recommended to review it
+        periodically.
+      </p>
+
+      <footer>
+        <p>
+          If you have any questions or concerns about this Privacy Policy, you
+          can contact us via email at: <strong>juanjosejjjj@gmail.com</strong>
+        </p>
+        <p>Last updated: 09/23/2024.</p>
+      </footer>
+    </section>
+
+    <section class="spanish">
       <p>
         Esta política de privacidad describe cómo nuestra aplicación de noticias
         maneja y protege la información que los usuarios proporcionan durante el
-        uso de la aplicación. Queremos dejar claro que **nuestra app no recopila
-        ni almacena datos personales de los usuarios** en ningún momento.
+        uso de la aplicación. Queremos dejar claro que
+        <strong
+          >nuestra app no recopila ni almacena datos personales de los
+          usuarios</strong
+        >
+        en ningún momento.
       </p>
       <p>
         Nos comprometemos a garantizar la confidencialidad de la información que
         pueda llegar a compartirse a través de servicios de terceros accesibles
         desde la app, como enlaces a sitios web externos.
       </p>
-    </section>
 
-    <section>
       <h2>Enlaces a Terceros</h2>
       <p>
         Nuestra aplicación puede contener enlaces a sitios web o servicios de
@@ -35,9 +122,7 @@
         políticas de privacidad de cada uno de estos sitios para asegurarse de
         estar de acuerdo con ellas.
       </p>
-    </section>
 
-    <section>
       <h2>Uso de Cookies</h2>
       <p>
         Nuestra aplicación no utiliza cookies propias para recopilar información
@@ -46,24 +131,28 @@
         usuario. Usted puede configurar su navegador para rechazar las cookies
         si así lo prefiere.
       </p>
-    </section>
 
-    <section>
       <h2>Actualización de esta Política de Privacidad</h2>
       <p>
         Nos reservamos el derecho de modificar esta Política de Privacidad en
         cualquier momento. Cualquier cambio será publicado en esta página, y se
         recomienda revisarla periódicamente.
       </p>
+
+      <footer>
+        <p>
+          Si tiene alguna pregunta o inquietud sobre esta Política de
+          Privacidad, puede ponerse en contacto con nosotros a través del correo
+          electrónico:
+          <strong>juanjosejjjj@gmail.com</strong>
+        </p>
+        <p>Última actualización: 09/23/2024.</p>
+      </footer>
     </section>
 
-    <footer>
-      <p>
-        Si tiene alguna pregunta o inquietud sobre esta Política de Privacidad,
-        puede ponerse en contacto con nosotros a través del correo electrónico
-        proporcionado en la sección de contacto de la aplicación.
-      </p>
-      <p>Última actualización: SEP/15/2024.</p>
-    </footer>
+    <script>
+      // Mostrar la versión en inglés por defecto
+      toggleLanguage("en");
+    </script>
   </body>
 </html>
